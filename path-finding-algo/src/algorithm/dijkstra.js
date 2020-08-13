@@ -2,7 +2,7 @@ function dijkstra(board, startNode, targetNode) {
     const visitedNodesInOrder = [];
     startNode.distance = 0;
     const unvisitedNodes = getAllNodes(board);
-    while (unvisitedNodes.length) {
+    while (!!unvisitedNodes.length) {
         priorityDistance(unvisitedNodes);
         const closestNode = unvisitedNodes.shift();
         if (closestNode.isWall) {
